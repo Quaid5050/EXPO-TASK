@@ -7,6 +7,7 @@ import { Icon } from "../components"
 import { translate } from "../i18n"
 import { DemoCommunityScreen, DemoShowroomScreen, DemoDebugScreen } from "../screens"
 import { DemoPodcastListScreen } from "../screens/DemoPodcastListScreen"
+import DemoTodoScreen  from "../screens/DemoTodoScreen"
 import { colors, spacing, typography } from "../theme"
 import { AppStackParamList, AppStackScreenProps } from "./AppNavigator"
 
@@ -81,6 +82,17 @@ export function DemoNavigator() {
           tabBarLabel: translate("demoNavigator.podcastListTab"),
           tabBarIcon: ({ focused }) => (
             <Icon icon="podcast" color={focused ? colors.tint : undefined} size={30} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="DemoTodo"
+        component={DemoTodoScreen}
+        options={{
+          // tabBarAccessibilityLabel: translate("demoNavigator.todoTab"),
+          // tabBarLabel: translate("demoNavigator.todoTab"),
+          tabBarIcon: ({ focused }) => (
+            <Icon icon="check" color={focused ? colors.tint : undefined} size={30} />
           ),
         }}
       />
